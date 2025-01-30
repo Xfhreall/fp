@@ -89,7 +89,7 @@ export default function Hero() {
           className="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-300"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 3.8 }}
+          transition={{ duration: 1, delay: 3.3 }}
         >
           Discover the latest gadgets, unbeatable deals, and a seamless shopping
           experience—all in one place. Shop smart, shop with Dummy Store.
