@@ -9,13 +9,6 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getProductData } from "@/utils/getProductData";
 import useEdit from "@/hooks/usePut";
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  image: string | File | null;
-}
 
 export default function EditProduct({ params }: { params: { id: string } }) {
   const [name, setName] = useState("");
@@ -43,7 +36,7 @@ export default function EditProduct({ params }: { params: { id: string } }) {
       try {
         const { dataProducts } = await getProductData();
         if (dataProducts) {
-          const product = dataProducts.find((p: any) => p.id === params.id);
+          const product = dataProducts.find((p) => p.id === params.id);
           if (product) {
             setName(product.name);
             setPrice(product.price.toString());
